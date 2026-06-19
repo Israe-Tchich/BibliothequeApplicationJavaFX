@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Fichier">
+                    <items>
+                        <MenuItem text="Quitter" onAction="#handleQuitter"/>
+                    </items>
+                </Menu>
+                <Menu text="Aide">
+                    <items>
+                        <MenuItem text="À propos" onAction="#handleAPropos"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <tabs>
+                <Tab text="📚 Livres" closable="false">
+                    <content>
+                        <fx:include source="livres.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="📋 Emprunts" closable="false">
+                    <content>
+                        <fx:include source="emprunts.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>
