@@ -86,9 +86,10 @@ src/
 └── view/           → Fichiers FXML + feuille de style CSS
 \`\`\`
 
-## 📄 Licence
-
-Projet académique réalisé dans le cadre du module Développement Java IHM - ENSAO.
 5. **Configurer les VM Options :**
-   - Run → Edit Configurations
-   - Dans VM Options, ajouter :
+   - Allez dans le menu : *Run* ➔ *Edit Configurations*
+   - Dans le champ *VM Options*, ajoutez la ligne suivante (en remplaçant le chemin par celui de votre SDK local) :
+     ```text
+     --module-path "/chemin/vers/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
+     ```
+
